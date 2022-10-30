@@ -1,95 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-12T11:13:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/machine%20learning/supervised-learning/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2022-08-07T00:00:00+09:00</published><updated>2022-08-07T00:00:00+09:00</updated><id>http://localhost:4000/machine%20learning/supervised-learning</id><content type="html" xml:base="http://localhost:4000/machine%20learning/supervised-learning/"><![CDATA[<h1 id="supervised-learning">Supervised Learning</h1>
-<p><em>Supervised Learning</em>: From the training data $(X, Y)$, make a good prediction of the output $Y$, $\hat{Y}$</p>
-
-<h2 id="simple-approaches-for-supervised-learning">Simple Approaches for Supervised Learning</h2>
-<ul>
-  <li>Parametric - Least squares</li>
-  <li>Non-parametric - Nearest neighbors</li>
-</ul>
-
-<h3 id="least-squares">Least Squares</h3>
-<p>Assumption of the linear model:</p>
-<ul>
-  <li>Input: $X = (1, x_1, x_2, …, x_d)^T$</li>
-  <li>Output: $\hat{Y} = X^T w = w_0 + \sum\limits_{j=1}^d x_j^T w_j$
-    <ul>
-      <li>$w$: Parameter of the model</li>
-      <li>$w_0$: Bias</li>
-    </ul>
-  </li>
-</ul>
-
-<p>Fitting the model to data $\to$ <em>least square</em> method</p>
-<ul>
-  <li>Goal: Pick $w$ to minimize the <em>residual sum of squares</em> (RSS)</li>
-</ul>
-
-\[\begin{aligned}
-    RSS(w) &amp;= (\vec{y} - Xw)^T (\vec{y} - Xw) \\
-    \frac{\partial}{\partial w} RSS(w) &amp;= X^T (\vec{y} = Xw) = 0 \\
-    \therefore w &amp;= (X^T X)^{-1} X^T \vec{y} \quad \text{if $X^T X$ is non-singular}
-\end{aligned}\]
-
-<h3 id="nearest-neighbor-methods">Nearest Neighbor Methods</h3>
-<p>Direct output from input $x_i$ based on <em>closeness</em></p>
-<ul>
-  <li>$\hat{Y} = \frac{1}{k} \sum\limits_{x_i \in N_k(x)} y_i$
-    <ul>
-      <li>$N_k(x)$: $k$-closest points to $x$, neighborhood of $x$</li>
-    </ul>
-  </li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>Least squares</th>
-      <th>Nearest neighbors</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>- Strong assumption (linear decision boundary) on data <br /> - Low variance (stable), high bias (inaccurate)</td>
-      <td>- Can adapt to any situation <br /> - High variance, low bias</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Most ML methods are based on these two techniques.</p>
-<ul>
-  <li><em>Kernel methods</em>: Capture features of high dimension data</li>
-  <li>Non-linear basis $\phi(\vec{x})$ rather than just $x$ for linear models</li>
-</ul>
-
-<h2 id="statistical-decision-theory">Statistical Decision Theory</h2>
-<p><em>Loss function</em> $L(Y, f(X))$: Given the model $f$, penalizes errors in prediction $f(X)$</p>
-<ul>
-  <li><em>Expected error loss</em> (EPE): $L(Y, f(X)) = (Y - f(X))^2$</li>
-</ul>
-
-<p>Goal: Choose $f$ that minimizes the loss function</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>For EPE loss function, pointwise expectation $f(x) = E(Y</td>
-      <td>X = x)$. $\to$ <em>regression function</em></td>
-    </tr>
-  </tbody>
-</table>]]></content><author><name>Your Name</name></author><category term="Machine Learning" /><summary type="html"><![CDATA[Supervised Learning Supervised Learning: From the training data $(X, Y)$, make a good prediction of the output $Y$, $\hat{Y}$]]></summary></entry><entry><title type="html">Introduction</title><link href="http://localhost:4000/machine%20learning/introduction/" rel="alternate" type="text/html" title="Introduction" /><published>2022-07-28T00:00:00+09:00</published><updated>2022-07-28T00:00:00+09:00</updated><id>http://localhost:4000/machine%20learning/introduction</id><content type="html" xml:base="http://localhost:4000/machine%20learning/introduction/"><![CDATA[<p>This post is a record of studying of mathematical methods for machine learning.</p>
-
-<h1 id="what-is-machine-learning">What is Machine Learning?</h1>
-<blockquote>
-  <p><em>“A computer program is said to _learn</em> from experience <em>E</em> with respect to some class of tasks <em>T</em> and performance measure <em>P</em> if its performance at tasks in <em>T</em>, as measured by <em>P</em>, improves with experience <em>E</em>.”_ <br />
-<em>Tom M. Mitchell</em></p>
-</blockquote>
-
-<p>Machine learning: Learning from data using statistical methods</p>
-<ul>
-  <li><em>Supervised learning</em></li>
-  <li><em>Unsupervised learning</em></li>
-  <li><em>Reinforcement learning</em></li>
-</ul>]]></content><author><name>Your Name</name></author><category term="Machine Learning" /><summary type="html"><![CDATA[This post is a record of studying of mathematical methods for machine learning.]]></summary></entry><entry><title type="html">Text and Typography</title><link href="http://localhost:4000/blogging/demo/text-and-typography/" rel="alternate" type="text/html" title="Text and Typography" /><published>2019-08-08T12:33:00+09:00</published><updated>2019-08-08T12:33:00+09:00</updated><id>http://localhost:4000/blogging/demo/text-and-typography</id><content type="html" xml:base="http://localhost:4000/blogging/demo/text-and-typography/"><![CDATA[<p>This post is to show Markdown syntax rendering on <a href="https://github.com/cotes2020/jekyll-theme-chirpy/fork"><strong>Chirpy</strong></a>, you can also use it as an example of writing. Now, let’s start looking at text and typography.</p>
+I"p%<p>This post is to show Markdown syntax rendering on <a href="https://github.com/cotes2020/jekyll-theme-chirpy/fork"><strong>Chirpy</strong></a>, you can also use it as an example of writing. Now, let’s start looking at text and typography.</p>
 
 <h2 id="titles">Titles</h2>
 <hr />
@@ -344,4 +253,5 @@ PYENV_SHELL=bash
       <p>The 2nd footnote source <a href="#fnref:fn-nth-2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>cotes</name></author><category term="Blogging" /><category term="Demo" /><category term="typography" /><summary type="html"><![CDATA[This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/commons/devices-mockup.png" /><media:content medium="image" url="http://localhost:4000/commons/devices-mockup.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>
+:ET

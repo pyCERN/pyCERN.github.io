@@ -1,0 +1,15 @@
+I"�<p>This post is a record of studying of mathematical methods for machine learning.</p>
+
+<h1 id="what-is-machine-learning">What is Machine Learning?</h1>
+<blockquote>
+  <p><em>“A computer program is said to _learn</em> from experience <em>E</em> with respect to some class of tasks <em>T</em> and performance measure <em>P</em> if its performance at tasks in <em>T</em>, as measured by <em>P</em>, improves with experience <em>E</em>.”_ <br />
+<em>Tom M. Mitchell</em></p>
+</blockquote>
+
+<p>Machine learning: Learning from data using statistical methods</p>
+<ul>
+  <li><em>Supervised learning</em></li>
+  <li><em>Unsupervised learning</em></li>
+  <li><em>Reinforcement learning</em></li>
+</ul>
+:ET

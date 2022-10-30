@@ -1,0 +1,80 @@
+I"¼	<h1 id="supervised-learning">Supervised Learning</h1>
+<p><em>Supervised Learning</em>: From the training data $(X, Y)$, make a good prediction of the output $Y$, $\hat{Y}$</p>
+
+<h2 id="simple-approaches-for-supervised-learning">Simple Approaches for Supervised Learning</h2>
+<ul>
+  <li>Parametric - Least squares</li>
+  <li>Non-parametric - Nearest neighbors</li>
+</ul>
+
+<h3 id="least-squares">Least Squares</h3>
+<p>Assumption of the linear model:</p>
+<ul>
+  <li>Input: $X = (1, x_1, x_2, â€¦, x_d)^T$</li>
+  <li>Output: $\hat{Y} = X^T w = w_0 + \sum\limits_{j=1}^d x_j^T w_j$
+    <ul>
+      <li>$w$: Parameter of the model</li>
+      <li>$w_0$: Bias</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Fitting the model to data $\to$ <em>least square</em> method</p>
+<ul>
+  <li>Goal: Pick $w$ to minimize the <em>residual sum of squares</em> (RSS)</li>
+</ul>
+
+\[\begin{aligned}
+    RSS(w) &amp;= (\vec{y} - Xw)^T (\vec{y} - Xw) \\
+    \frac{\partial}{\partial w} RSS(w) &amp;= X^T (\vec{y} = Xw) = 0 \\
+    \therefore w &amp;= (X^T X)^{-1} X^T \vec{y} \quad \text{if $X^T X$ is non-singular}
+\end{aligned}\]
+
+<h3 id="nearest-neighbor-methods">Nearest Neighbor Methods</h3>
+<p>Direct output from input $x_i$ based on <em>closeness</em></p>
+<ul>
+  <li>$\hat{Y} = \frac{1}{k} \sum\limits_{x_i \in N_k(x)} y_i$
+    <ul>
+      <li>$N_k(x)$: $k$-closest points to $x$, neighborhood of $x$</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Least squares</th>
+      <th>Nearest neighbors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>- Strong assumption (linear decision boundary) on data <br /> - Low variance (stable), high bias (inaccurate)</td>
+      <td>- Can adapt to any situation <br /> - High variance, low bias</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Most ML methods are based on these two techniques.</p>
+<ul>
+  <li><em>Kernel methods</em>: Capture features of high dimension data</li>
+  <li>Non-linear basis $\phi(\vec{x})$ rather than just $x$ for linear models</li>
+</ul>
+
+<h2 id="statistical-decision-theory">Statistical Decision Theory</h2>
+<p><em>Loss function</em> $L(Y, f(X))$: Given the model $f$, penalizes errors in prediction $f(X)$</p>
+<ul>
+  <li><em>Expected error loss</em> (EPE): $L(Y, f(X)) = (Y - f(X))^2$</li>
+</ul>
+
+<p>Goal: Choose $f$ that minimizes the loss function</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>For EPE loss function, pointwise expectation $f(x) = E(Y</td>
+      <td>X = x)$. $\to$ <em>regression function</em></td>
+    </tr>
+  </tbody>
+</table>
+:ET
